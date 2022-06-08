@@ -1,0 +1,72 @@
+#page_content {
+    min-height: 650px;
+}
+.slider {
+    height: auto;
+    background-color: #FFF;
+    padding-top: 150px;
+    padding-bottom: 0;
+}
+.slider .right {
+    padding-top: 20px;
+}
+.navbar {
+    background-color: #FFF !important;
+}
+.navbar .btn-1 {
+    padding: 5px 20px;
+    font-size: small;
+}
+.features .box p {
+    min-height: 100px;
+}
+ol.carousel-indicators li {
+    /*background-color: #444;*/
+}
+.testimonials img {
+    height: 100px;
+}
+.testimonials .box p {
+    min-height: 160px;
+}
+.faq-section {
+    background: #FFF;
+    padding-top: 100px;
+    /*padding-bottom: 20px;*/
+}
+.faq-section .line {
+    background: linear-gradient(to right, #507bf5 0%,#04c3e1 100%);
+    height: 2px;
+    width: 50px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.faq-body {
+    font-size: smaller;
+    margin-bottom: 50px;
+}
+.faq-question {
+    background: linear-gradient(to right, #507bf5 0%,#04c3e1 100%);
+    color: #FFF;
+    padding: 15px 15px 15px;
+    border-bottom: 1px solid #F5f5f5;
+    cursor: pointer;
+}
+.faq-answer {
+    padding: 15px;
+    background-color: #F5F5F5;
+}
+.faq-each:not(.open) .faq-answer {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .slider .content .right img {
+        margin-top: -100px;
+    }
+    .slider {
+        /*padding-bottom: 60px;*/
+        padding-top: 200px;
+    }
+}

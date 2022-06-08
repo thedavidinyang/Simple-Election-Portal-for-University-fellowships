@@ -1,0 +1,22 @@
+RewriteEngine On    # Turn on the rewriting engine
+
+
+RewriteRule    ^1261622387512781028128758912875128712581258/?$    loader.php    [NC,L] 
+RewriteRule    ^dashboard/?$    dash.php?p=home    [NC,L]
+RewriteRule    ^dxak/?$    dxak/    [NC,L]
+RewriteRule    ^link/([A-Za-z0-9-]+)?$    index.php?p=register&l=$1    [NC,L]
+
+RewriteRule    ^home/?$    index.php?p=home    [NC,L]
+RewriteRule    ^login/?$    index.php?p=login    [NC,L]
+RewriteRule    ^register/?$    index.php?p=register    [NC,L]
+RewriteRule    ^reset_password/?$    index.php?p=reset    [NC,L]
+RewriteRule    ^test/?$    test/    [NC,L]
+RewriteRule    ^([A-Za-z0-9-]+)/?$    index.php     [NC,L] 
+
+RewriteRule    ^homez/([A-Za-z0-9-]+)/?$    index.php?p=home    [NC,L]   
+
+Options -Indexes
+
+
+
+

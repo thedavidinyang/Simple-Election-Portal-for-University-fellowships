@@ -1,0 +1,249 @@
+
+  // To make Pace works on Ajax calls
+  $(document).ajaxStart(function () {
+    Pace.restart();
+  });
+
+
+    
+  $('.home').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'home'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").hide();
+		top.document.title='Dashboard'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });   
+
+
+  $('.out').click(function () {
+    $.ajax({
+      url: 'loader.php', 
+		data: { page: 'out'},
+		type: 'POST',
+    success: function (data) {
+		if(data==1){
+			new PNotify({
+                                  title: 'Logout  Successful',
+                                  text: '',
+                                  type: 'success',
+								  nonblock: {
+                                      nonblock: true
+                                  },
+                                  styling: 'bootstrap3'
+                              });
+			location.reload();
+		} else {
+			new PNotify({
+                                  title: 'Oopse...! Looks like something went wrong',
+                                  text: 'Please  try again',
+                                  type: 'error',
+								  //nonblock: {
+                                 //     nonblock: true
+                                 // },
+                                  styling: 'bootstrap3'
+                              });
+		}
+	},
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page'+data,
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  }); 
+
+
+
+  $('.adcustomer').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'adcust'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").show();
+		top.document.title='Add customer'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+
+  $('.customers').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'customers'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").show();
+		top.document.title='All Customers'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+
+  $('.adpro').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'adpro'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").show();
+		top.document.title='Add Product'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+         
+  $('.sale').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'sale'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").show();
+		top.document.title='New sale'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+      
+      
+  $('.report').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'report'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").show();
+		top.document.title='Reports'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+      
+
+   
+  $('.today').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'today'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").show();
+		top.document.title='Today'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+      
+
+   
+  $('.products').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'products'},
+		type: "POST",
+    success: function (result) {		
+		$("#homebutton").show();
+		top.document.title='All Products'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+      
+
+   
+  $('.settings').click(function () {
+    $.ajax({
+      url: "loader.php",
+		data: {page:'settings'},
+		type: "POST",
+    success: function (result) {
+		$("#homebutton").show();
+		top.document.title='Settings'
+        $('.diex-page-now').html(result);
+      },
+	error:function (){
+	new PNotify({
+                                  title: 'Load Error',
+                                  text: 'OOpse! Something went wrong, please check your internet connection and reload the page',
+                                  type: 'error',
+                                  styling: 'bootstrap3'
+                              });
+	}
+    });
+  });
+      
+
+    

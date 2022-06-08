@@ -1,0 +1,6 @@
+conf.php
+*.jpg
+*.png
+/vendors
+/massets
+/vendor
